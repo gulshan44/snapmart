@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Container from './Container';
+import { Link } from 'react-router-dom'
 
 const images = [
     'https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692947383286-714WUJlhbLS._SL1500_.jpg',
@@ -45,7 +46,7 @@ const Slider = () => {
                     <p className='text-base sm:text-lg text-gray-600 mb-4'>Discover the latest headphones, earphones, mobiles, tablets etc.</p>
                     <p className='text-base sm:text-lg text-gray-600 mb-4'>Exclusive deals just for you!</p>
 
-                    <button className='bg-gray-200 rounded text-indigo-600 py-2 px-4 font-medium sm:px-6 text-base sm:text-lg hover:bg-indigo-600 hover:text-white transition-all'>Shop Now</button>
+                    <Link to='/store' className='bg-gray-200 rounded text-indigo-600 py-2 px-4 font-medium sm:px-6 text-base sm:text-lg hover:bg-indigo-600 hover:text-white transition-all'>Shop Now</Link>
 
                 </div>
 

@@ -50,7 +50,7 @@ const Pages = () => {
 
 
   return (
-    <Container className='grid grid-cols-1 md:grid-cols-4 gap-3 my-5'>
+    <Container className='grid grid-cols-1 md:grid-cols-4 gap-5 my-5'>
 
       <div className="block md:hidden mb-4 px-2">
         <select
