@@ -103,7 +103,7 @@ const Navbar = () => {
                 <input
                     type="text"
                     placeholder="Search..."
-                    className="w-[50%] border px-4 py-2 rounded text-black font-semibold"
+                    className="w-full md:w-[50%] border px-4 py-2 rounded-full text-black font-semibold"
                 />
                 <RxCross1
                     className="text-xl ml-3 cursor-pointer hover:text-red-500 transition"
