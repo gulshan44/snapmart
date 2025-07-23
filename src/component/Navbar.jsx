@@ -5,6 +5,7 @@ import { FiSearch } from "react-icons/fi";
 import { FaCartArrowDown } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { useCart } from '../context/CartContext';
 
 const navLinks = [
     { name: "Home", path: "/" },
@@ -17,6 +18,10 @@ const Navbar = () => {
 
     const [showSearchBar, setShowSearchBar] = useState(false);
     const [mobileMenu, setMobileMenu] = useState(false);
+
+    const { cartItems } = useCart();
+
+    const totalItems = cartItems.length;
 
     return (
 
@@ -64,12 +69,18 @@ const Navbar = () => {
                             <FiSearch />
                         </button>
 
-                        <Link to="/cart" className="relative text-gray-700 hover:text-indigo-600">
+                        <NavLink to="/cart"
+                            className={({ isActive }) =>
+                                `relative hover:text-indigo-600 ${isActive ? "text-indigo-600" : "text-gray-700"
+                                }`
+                            }>
                             <FaCartArrowDown className="h-6 w-6" />
-                            <span className="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full absolute -top-3 -right-3">
-                                0
-                            </span>
-                        </Link>
+                            {totalItems > 0 && (
+                                <span className="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full absolute -top-3 -right-3">
+                                    {totalItems}
+                                </span>
+                            )}
+                        </NavLink>
 
                         {/* Mobile Hamburger */}
                         <button

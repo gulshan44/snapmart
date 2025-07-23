@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useCart } from '../context/CartContext';
 
 const ProductBox = ({ products }) => {
+
+    const { addToCart } = useCart();
+
     return (
         <>
 
@@ -22,7 +26,11 @@ const ProductBox = ({ products }) => {
 
                         <p className='font-semibold text-gray-900'>Price: ${product.price}</p>
 
-                        <button className='mt-2 bg-indigo-600 cursor-pointer px-2 py-1 sm:px-3 sm:py-2 text-white text-base sm:text-[18px] rounded-sm'>Add to cart</button>
+                        <button
+                            onClick={() => addToCart(product)}
+                            className='mt-2 bg-indigo-600 cursor-pointer px-2 py-1 sm:px-3 sm:py-2 text-white text-base sm:text-[18px] rounded-sm'>
+                            Add to cart
+                        </button>
                     </div>
 
                 </div>
