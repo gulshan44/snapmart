@@ -4,7 +4,42 @@
     transition: opacity 1s ease;
 }
 
-/* Optional (if using global.css or Tailwind base styles) */
+/* checkout form css */
 .input {
   @apply border rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500;
+}
+
+/* text type css */
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #4f46e5;
+  width: 0ch;
+  animation: typing 3s steps(25, end) infinite, blink 0.7s step-end infinite;
+  animation-delay: 0s, 0s;
+  animation-fill-mode: none, none;
+  animation-iteration-count: infinite, infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  90% {
+    width: 25ch;  /* exactly matches text */
+  }
+  95% {
+    width: 1ch;
+  }
+  100% {
+    width: 0ch; /* reset */
+  }
+}
+
+/* Cursor blink */
+@keyframes blink {
+  0%, 100% { border-color: #4f46e5; }
+  50% { border-color: transparent; }
 }

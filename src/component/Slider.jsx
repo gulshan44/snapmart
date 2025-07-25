@@ -41,6 +41,8 @@ const Slider = () => {
 
                 <div className='w-full md:w-1/2 text-center md:text-left mt-4 sm:mt-0'>
 
+                    <h2 className='typewriter text-xl sm:text-2xl font-bold text-indigo-700 mb-4'>Created by Gulshan Verma</h2>
+
                     <h2 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-700 mb-4'>One stop solution <span className='text-indigo-600 font-bold'>Snapmart</span></h2>
 
                     <p className='text-base sm:text-lg text-gray-600 mb-4'>Discover the latest headphones, earphones, mobiles, tablets etc.</p>
