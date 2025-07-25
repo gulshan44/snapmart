@@ -8,6 +8,7 @@ import CartPage from './pages/CartPage'
 import { Toaster } from 'react-hot-toast';
 import Checkout from './pages/Checkout'
 import ThankYou from './component/ThankYou'
+import MyOrder from './pages/MyOrder'
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path='/cart' element={<CartPage />} />
           <Route path='/checkoutpage' element={<Checkout />} />
           <Route path="/thankyou" element={<ThankYou />} />
+          <Route path='myorder' element={<MyOrder />} />
         </Routes>
 
         <Footer />
