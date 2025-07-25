@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "../Container";
+import { Link } from 'react-router-dom'
 
 const CartItems = ({ cartItems, setCartItems }) => {
 
@@ -141,9 +142,11 @@ const CartItems = ({ cartItems, setCartItems }) => {
                         </div>
                     </div>
 
-                    <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 sm:py-3 rounded-full font-semibold text-base transition duration-300">
-                        Continue to checkout
-                    </button>
+                    <Link to="/checkoutpage">
+                        <button className="w-full cursor-pointer bg-indigo-600 hover:bg-indigo-700 text-white py-2 sm:py-3 rounded-full font-semibold text-base transition duration-300">
+                            Continue to checkout
+                        </button>
+                    </Link>
                 </div>
             </Container>
         </div>

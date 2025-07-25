@@ -107,7 +107,7 @@ const Pages = () => {
       </div>
 
 
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:col-span-3 gap-6 my-5'>
+      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:col-span-3 gap-2 sm:gap-6 my-5'>
         <ProductBox products={currentProducts} />
       </div>
 

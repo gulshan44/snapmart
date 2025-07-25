@@ -6,13 +6,15 @@ import Footer from './component/Footer/Footer'
 import Store from './pages/Store'
 import CartPage from './pages/CartPage'
 import { Toaster } from 'react-hot-toast';
+import Checkout from './pages/Checkout'
+import ThankYou from './component/ThankYou'
 
 const App = () => {
   return (
     <div>
 
       <BrowserRouter>
-      <Toaster position="bottom-right" toastOptions={{ duration: 2000 }} />
+      <Toaster position="top-center" toastOptions={{ duration: 2000 }} />
 
         <Navbar />
 
@@ -20,6 +22,8 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/store' element={<Store />} />
           <Route path='/cart' element={<CartPage />} />
+          <Route path='/checkoutpage' element={<Checkout />} />
+          <Route path="/thankyou" element={<ThankYou />} />
         </Routes>
 
         <Footer />
