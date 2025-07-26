@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
 
-    const { cartItems, setCartItems } = useCart();
+    const { cartItems, setCartItems, setOrders } = useCart();
     const navigate = useNavigate();
 
     const [paymentMethod, setPaymentMethod] = useState("cod");
@@ -27,6 +27,17 @@ const Checkout = () => {
             toast.error("Please enter your UPI ID...");
             return;
         }
+
+        const newOrder = {
+            id: `ORD-${Date.now()}`,
+            items: cartItems,
+            total: subtotal.toFixed(2),
+            paymentMethod,
+            date: new Date().toLocaleDateString(),
+            deliveryDate
+        };
+
+        setOrders((prev) => [...prev, newOrder]);
 
         toast.success("🎉 Order Placed Successfully!");
 

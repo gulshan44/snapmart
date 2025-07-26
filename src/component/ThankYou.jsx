@@ -36,6 +36,13 @@ const ThankYou = () => {
                 >
                     Continue Shopping
                 </Link>
+
+                <Link
+                    to="/myorder"
+                    className="inline-block ml-3 bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-indigo-700 transition"
+                >
+                   View my order
+                </Link>
             </div>
         </div>
     );

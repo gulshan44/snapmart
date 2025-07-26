@@ -10,9 +10,18 @@ export const CartProvider = ({ children }) => {
         return storedCart ? JSON.parse(storedCart) : [];
     });
 
+    const [orders, setOrders] = useState(() => {
+        const storedOrders = localStorage.getItem("snapmart-orders");
+        return storedOrders ? JSON.parse(storedOrders) : [];
+    });
+
     useEffect(() => {
         localStorage.setItem("snapmart-cart", JSON.stringify(cartItems));
     }, [cartItems]);
+
+    useEffect(() => {
+        localStorage.setItem("snapmart-orders", JSON.stringify(orders));
+    }, [orders]);
 
     const addToCart = (product) => {
         const exists = cartItems.find((item) => item.id === product.id);
@@ -33,9 +42,14 @@ export const CartProvider = ({ children }) => {
 
     const clearCart = () => setCartItems([]);
 
+    const clearOrders = () => {
+        setOrders([]);
+    };
+
+
     return (
         <CartContext.Provider
-            value={{ cartItems, setCartItems, addToCart, removeFromCart, clearCart }}
+            value={{ cartItems, setCartItems, addToCart, removeFromCart, clearCart, orders, setOrders, clearOrders  }}
         >
             {children}
         </CartContext.Provider>
