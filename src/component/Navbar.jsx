@@ -10,7 +10,6 @@ import { useCart } from '../context/CartContext';
 const navLinks = [
     { name: "Home", path: "/" },
     { name: "Store", path: "/store" },
-    { name: "Pages", path: "/pages" },
     { name: "Contact Us", path: "/contact" },
     { name: "My Order", path: "/myorder" },
 ];
@@ -99,7 +98,7 @@ const Navbar = () => {
 
             {/* search bar */}
             <div
-                className={`flex justify-center items-center absolute z-[99] w-full p-4 bg-gray-100 shadow-2xl transition-all duration-500 ease-in-out overflow-hidden ${showSearchBar ? 'max-h-[100px] opacity-100' : 'max-h-0 opacity-0'
+                className={`flex justify-center items-center fixed top-15 left-0 z-50 w-full p-4 bg-gray-100 shadow-2xl transition-all duration-500 ease-in-out overflow-hidden ${showSearchBar ? 'max-h-[100px] opacity-100' : 'max-h-0 opacity-0'
                     }`}>
                 <input
                     type="text"
