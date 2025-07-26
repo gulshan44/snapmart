@@ -12,7 +12,7 @@ const ProductBox = ({ products }) => {
             {products.map(product => (
 
                 <div key={product.id} className='shadow-lg rounded-md transition bg-white group overflow-hidden hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02]'>
-                    <Link to={"/store/product-details" + product.id}>
+                    <Link to={`/store/product-details/${product.id}`}>
                         <img
                             className='w-full object-cover rounded-t-md transition group-hover:scale-105'
                             src={product.image}

@@ -9,6 +9,7 @@ import { Toaster } from 'react-hot-toast';
 import Checkout from './pages/Checkout'
 import ThankYou from './component/ThankYou'
 import MyOrder from './pages/MyOrder'
+import ProductDetail from './pages/ProductDetail'
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path='/checkoutpage' element={<Checkout />} />
           <Route path="/thankyou" element={<ThankYou />} />
           <Route path='myorder' element={<MyOrder />} />
+          <Route path='/store/product-details/:id' element={<ProductDetail />} />
         </Routes>
 
         <Footer />
