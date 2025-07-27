@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import Container from '../Container'
 import ProductBox from '../ProductBox';
+import { useSearch } from '../../context/SearchContext';
 
 const Pages = () => {
 
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
-
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 20;
 
-  const filteredProducts = selectedCategory
-    ? products.filter(product => product.category === selectedCategory)
-    : products;
+  const { searchQuery, setSearchQuery } = useSearch();
+
+  const filteredProducts = products.filter((p) => {
+    const matchesCategory = selectedCategory ? p.category === selectedCategory : true;
+    const matchesSearch =
+      p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.category.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -77,7 +83,8 @@ const Pages = () => {
           <button
             onClick={() => {
               setSelectedCategory(null);
-              setCurrentPage(1); // reset to first page
+              setCurrentPage(1);
+              setSearchQuery("");
             }}
             className={`transition px-4 py-2 rounded text-sm font-medium capitalize cursor-pointer
                    ${selectedCategory === null
@@ -93,7 +100,8 @@ const Pages = () => {
               key={index}
               onClick={() => {
                 setSelectedCategory(category);
-                setCurrentPage(1); // Reset to first page
+                setCurrentPage(1);
+                setSearchQuery("");
               }}
               className={`transition px-4 py-2 rounded text-sm font-medium capitalize cursor-pointer 
                      ${selectedCategory === category
@@ -108,7 +116,13 @@ const Pages = () => {
 
 
       <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:col-span-3 gap-2 sm:gap-6 my-5'>
-        <ProductBox products={currentProducts} />
+        {currentProducts.length > 0 ? (
+          <ProductBox products={currentProducts} />
+        ) : (
+          <p className="text-gray-500 col-span-full text-center">
+            No products found for "{searchQuery}"
+          </p>
+        )}
       </div>
 
       <div className="col-span-full flex justify-center mt-6 w-full">

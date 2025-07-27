@@ -75,7 +75,7 @@ const ProductDetail = () => {
                         {product.description.length > 120 && (
                             <button
                                 onClick={() => setReadMore(!readMore)}
-                                className="text-indigo-600 ml-2 font-semibold hover:underline"
+                                className="text-indigo-600 cursor-pointer ml-2 font-semibold hover:underline"
                             >
                                 {readMore ? "Read Less" : "Read More"}
                             </button>
@@ -85,7 +85,7 @@ const ProductDetail = () => {
                     {/* Add to Cart Button */}
                     <button
                         onClick={handleAddToCart}
-                        className="w-full bg-indigo-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition"
+                        className="w-full cursor-pointer bg-indigo-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition"
                     >
                         Add to Cart
                     </button>

@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import Container from './Container'
 import { FiSearch } from "react-icons/fi";
 import { FaCartArrowDown } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { useCart } from '../context/CartContext';
+import { useSearch } from '../context/SearchContext';
+import { useProduct } from '../context/ProductContext';
 
 const navLinks = [
     { name: "Home", path: "/" },
@@ -16,12 +18,25 @@ const navLinks = [
 
 const Navbar = () => {
 
+    const { setSearchQuery } = useSearch();
+    const navigate = useNavigate();
+
     const [showSearchBar, setShowSearchBar] = useState(false);
     const [mobileMenu, setMobileMenu] = useState(false);
+    const [searchValue, setSearchValue] = useState("");
 
     const { cartItems } = useCart();
 
     const totalItems = cartItems.length;
+
+    const handleSearch = (e) => {
+        if (e.key === "Enter" && searchValue.trim()) {
+            setSearchQuery(searchValue);
+            navigate("/store");
+            setSearchValue("");
+            setShowSearchBar(false);
+        }
+    };
 
     return (
 
@@ -98,16 +113,22 @@ const Navbar = () => {
 
             {/* search bar */}
             <div
-                className={`flex justify-center items-center fixed top-13 sm:top-15 left-0 z-50 w-full p-4 bg-gray-100 shadow-2xl transition-all duration-500 ease-in-out overflow-hidden ${showSearchBar ? 'max-h-[100px] opacity-100' : 'max-h-0 opacity-0'
+                className={`flex justify-center items-center fixed top-12 sm:top-15 left-0 z-50 w-full p-4 bg-gray-100 shadow-2xl transition-all duration-500 ease-in-out overflow-hidden ${showSearchBar ? 'max-h-[100px] opacity-100' : 'max-h-0 opacity-0'
                     }`}>
                 <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="Search products..."
+                    value={searchValue}
+                    onChange={(e) => setSearchValue(e.target.value)}
+                    onKeyDown={handleSearch}
                     className="w-full md:w-[50%] border px-4 py-2 rounded-full text-black font-semibold"
                 />
                 <RxCross1
                     className="text-xl ml-3 cursor-pointer hover:text-red-500 transition"
-                    onClick={() => setShowSearchBar(false)}
+                    onClick={() => {
+                        setShowSearchBar(false);
+                        setSearchValue("");
+                    }}
                 />
             </div>
 
