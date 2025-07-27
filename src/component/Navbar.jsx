@@ -41,7 +41,6 @@ const Navbar = () => {
     return (
 
         <>
-
             <header className='shadow-md py-3 sticky top-0 z-10 bg-white/70'>
 
                 <Container className='flex justify-between items-center'>
