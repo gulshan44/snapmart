@@ -1,52 +1,38 @@
-<<<<<<< HEAD
-# snapmart
-A modern shopping frontend built using React, Vite, and Tailwind CSS.
-=======
-# React + Vite
+# SnapMart Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SnapMart is a modern and responsive e-commerce frontend built using **React**, **Vite**, and **Tailwind CSS**. It allows users to browse products, filter by category, search instantly, and manage items in a shopping cart — all with a clean and smooth UI.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-
-# 🛍️ SnapMart
-
-SnapMart is a responsive e-commerce frontend built with **React**, **Vite**, and **Tailwind CSS**.  
-It showcases a modern product listing UI with category filters, pagination, and mobile responsiveness.
-
-## 🔧 Tech Stack
+## 🚀 Tech Stack
 
 - ⚛️ React
 - ⚡ Vite
 - 🎨 Tailwind CSS
-- 🛒 FakeStoreAPI (for product data)
+- 📦 FakeStoreAPI (for mock product data)
+- 🧠 Context API (for global state management)
 
 ## ✨ Features
 
-- 🧭 Category-wise product filtering (with reset option)
-- 📱 Fully responsive (Dropdown filter on mobile, sidebar on desktop)
-- 🔄 Pagination with smooth scroll-to-top effect
-- 🌗 Clean UI with hover and active states
-- 🔍 Uses context & useState/useEffect for state management
+- 🔍 Live product search with instant results
+- 🧭 Category-wise product filtering
+- 📱 Fully responsive layout (mobile + tablet friendly)
+- 🛒 Shopping cart with add/remove and quantity option functionality
+- 🔄 Pagination with scroll-to-top effect
+- 📦 Checkout page design (frontend-only)
+- 🏠 View my order and order history
 
 ## 📷 Preview
 
-![SnapMart Preview](https://via.placeholder.com/1200x600.png?text=SnapMart+UI+Preview)
+![SnapMart UI Preview](https://via.placeholder.com/1200x600.png?text=SnapMart+UI+Preview)
 
-## 📦 Getting Started
+## 🛠️ Getting Started
+
+Follow the steps below to run SnapMart locally:
 
 ```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/gulshan44/snapmart.git
 
-# Move into the folder
+# Move into the project folder
 cd snapmart
 
 # Install dependencies
@@ -55,4 +41,11 @@ npm install
 # Start the development server
 npm run dev
 
->>>>>>> 74de41c (Initial commit)
+Now open http://localhost:5173 to view it in the browser.
+
+API Reference
+This project uses the free FakeStoreAPI to fetch products and categories.
+
+# Author
+Made with 💙 by Gulshan Verma
+GitHub: @gulshan44
