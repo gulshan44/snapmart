@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import Container from './Container'
 import ProductBox from './ProductBox';
+import { useLoader } from '../context/LoaderContext';
 
 const RecentlyAdded = () => {
 
     const [products, setProducts] = useState([]);
+    const { setLoading } = useLoader();
 
     useEffect(() => {
+        setLoading(true);
         fetch('https://fakestoreapi.in/api/products?limit=5')
             .then(res => res.json())
             .then(data => {
@@ -16,8 +19,12 @@ const RecentlyAdded = () => {
                 } else {
                     console.error('Unexpected data structure:', data);
                 }
+                setLoading(false);
             })
-            .catch(err => console.error('Error fetching products:', err));
+            .catch((err) => {
+                console.error('Error fetching products:', err);
+                setLoading(false);
+            });
     }, []);
 
     return (

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Container from '../Container'
 import ProductBox from '../ProductBox';
 import { useSearch } from '../../context/SearchContext';
+import { useLoader } from '../../context/LoaderContext';
 
 const Pages = () => {
 
@@ -12,6 +13,7 @@ const Pages = () => {
   const itemsPerPage = 20;
 
   const { searchQuery, setSearchQuery } = useSearch();
+  const { setLoading } = useLoader();
 
   const filteredProducts = products.filter((p) => {
     const matchesCategory = selectedCategory ? p.category === selectedCategory : true;
@@ -27,30 +29,38 @@ const Pages = () => {
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
 
   useEffect(() => {
+    setLoading(true);
     fetch('https://fakestoreapi.in/api/products')
       .then(res => res.json())
       .then(data => {
         if (data && Array.isArray(data.products)) {
-          setProducts(data.products); // ✅ All products
-        } else {
-          console.error('Unexpected data structure:', data);
+          setProducts(data.products);
         }
+        setLoading(false);
       })
-      .catch(err => console.error('Error fetching products:', err));
+      .catch(err => {
+        console.error("Product error", err);
+        setLoading(false);
+      });
   }, []);
 
   useEffect(() => {
+    setLoading(true);
     fetch('https://fakestoreapi.in/api/products/category')
       .then(res => res.json())
       .then(data => {
         console.log("Fetched categories:", data);
         if (Array.isArray(data.categories)) {
-          setCategories(data.categories);  // ✅ सही key use करें
+          setCategories(data.categories);
         } else {
           console.error('Category array not found in response:', data);
         }
+        setLoading(false);
       })
-      .catch(err => console.error('Error fetching categories:', err));
+      .catch(err => {
+        console.error('Error fetching categories:', err);
+        setLoading(false);
+      });
   }, []);
 
   return (
