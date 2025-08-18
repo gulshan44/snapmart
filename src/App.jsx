@@ -11,14 +11,17 @@ import ThankYou from './component/ThankYou'
 import MyOrder from './pages/MyOrder'
 import ProductDetail from './pages/ProductDetail'
 import Loader from './component/loader/Loader'
+import ScrollToTop from './component/ScrollToTop'
+import Contact from './pages/Contact'
 
 const App = () => {
   return (
     <div>
 
       <BrowserRouter>
-      <Loader />
-      <Toaster position="top-center" toastOptions={{ duration: 2000 }} />
+        <Loader />
+        <Toaster position="top-center" toastOptions={{ duration: 2000 }} />
+        <ScrollToTop />
 
         <Navbar />
 
@@ -30,6 +33,7 @@ const App = () => {
           <Route path="/thankyou" element={<ThankYou />} />
           <Route path='myorder' element={<MyOrder />} />
           <Route path='/store/product-details/:id' element={<ProductDetail />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
 
         <Footer />

@@ -12,7 +12,7 @@ const FeaturedProducts = () => {
             .then(res => res.json())
             .then(data => {
                 if (data && Array.isArray(data.products)) {
-                    // Skip first 10 and take rest
+                    
                     setProducts(data.products.slice(10));
                 } else {
                     console.error('Unexpected data structure:', data);
