@@ -1,0 +1,142 @@
+[
+  {
+    "id": 101,
+    "title": "iPhone 14 Pro Max",
+    "price": 124999,
+    "category": "smartphone",
+    "image": "https://dummyimage.com/400x400/000/fff&text=iPhone+14+Pro+Max"
+  },
+  {
+    "id": 102,
+    "title": "Samsung Galaxy S23 Ultra",
+    "price": 99999,
+    "category": "smartphone",
+    "image": "https://dummyimage.com/400x400/000/fff&text=Galaxy+S23+Ultra"
+  },
+  {
+    "id": 103,
+    "title": "OnePlus 11R 5G",
+    "price": 45999,
+    "category": "smartphone",
+    "image": "https://dummyimage.com/400x400/000/fff&text=OnePlus+11R"
+  },
+  {
+    "id": 104,
+    "title": "MacBook Air M2",
+    "price": 119999,
+    "category": "laptop",
+    "image": "https://dummyimage.com/400x400/000/fff&text=MacBook+Air+M2"
+  },
+  {
+    "id": 105,
+    "title": "Dell XPS 13",
+    "price": 104999,
+    "category": "laptop",
+    "image": "https://dummyimage.com/400x400/000/fff&text=Dell+XPS+13"
+  },
+  {
+    "id": 106,
+    "title": "HP Spectre x360",
+    "price": 99999,
+    "category": "laptop",
+    "image": "https://dummyimage.com/400x400/000/fff&text=HP+Spectre+x360"
+  },
+  {
+    "id": 107,
+    "title": "Sony WH-1000XM5 Headphones",
+    "price": 29999,
+    "category": "headphones",
+    "image": "https://dummyimage.com/400x400/000/fff&text=Sony+XM5"
+  },
+  {
+    "id": 108,
+    "title": "Bose QuietComfort 45",
+    "price": 24999,
+    "category": "headphones",
+    "image": "https://dummyimage.com/400x400/000/fff&text=Bose+QC45"
+  },
+  {
+    "id": 109,
+    "title": "JBL Flip 6 Speaker",
+    "price": 9999,
+    "category": "speaker",
+    "image": "https://dummyimage.com/400x400/000/fff&text=JBL+Flip+6"
+  },
+  {
+    "id": 110,
+    "title": "Amazon Echo Dot (5th Gen)",
+    "price": 5499,
+    "category": "smart-speaker",
+    "image": "https://dummyimage.com/400x400/000/fff&text=Echo+Dot+5"
+  },
+  {
+    "id": 111,
+    "title": "Apple iPad Pro 12.9",
+    "price": 99999,
+    "category": "tablet",
+    "image": "https://dummyimage.com/400x400/000/fff&text=iPad+Pro+12.9"
+  },
+  {
+    "id": 112,
+    "title": "Samsung Galaxy Tab S8",
+    "price": 84999,
+    "category": "tablet",
+    "image": "https://dummyimage.com/400x400/000/fff&text=Galaxy+Tab+S8"
+  },
+  {
+    "id": 113,
+    "title": "Canon EOS 90D Camera",
+    "price": 114999,
+    "category": "camera",
+    "image": "https://dummyimage.com/400x400/000/fff&text=Canon+90D"
+  },
+  {
+    "id": 114,
+    "title": "Sony Alpha A7 III",
+    "price": 154999,
+    "category": "camera",
+    "image": "https://dummyimage.com/400x400/000/fff&text=Sony+A7III"
+  },
+  {
+    "id": 115,
+    "title": "GoPro HERO11",
+    "price": 45999,
+    "category": "action-camera",
+    "image": "https://dummyimage.com/400x400/000/fff&text=GoPro+HERO11"
+  },
+  {
+    "id": 116,
+    "title": "Apple Watch Ultra",
+    "price": 85999,
+    "category": "smartwatch",
+    "image": "https://dummyimage.com/400x400/000/fff&text=Watch+Ultra"
+  },
+  {
+    "id": 117,
+    "title": "Samsung Galaxy Watch 5",
+    "price": 32999,
+    "category": "smartwatch",
+    "image": "https://dummyimage.com/400x400/000/fff&text=Galaxy+Watch+5"
+  },
+  {
+    "id": 118,
+    "title": "Mi Smart Band 7",
+    "price": 4999,
+    "category": "smartwatch",
+    "image": "https://dummyimage.com/400x400/000/fff&text=Mi+Band+7"
+  },
+  {
+    "id": 119,
+    "title": "LG 55-inch OLED TV",
+    "price": 134999,
+    "category": "television",
+    "image": "https://dummyimage.com/400x400/000/fff&text=LG+OLED+55"
+  },
+  {
+    "id": 120,
+    "title": "Sony Bravia 65-inch 4K",
+    "price": 184999,
+    "category": "television",
+    "image": "https://dummyimage.com/400x400/000/fff&text=Sony+Bravia+65"
+  }
+]

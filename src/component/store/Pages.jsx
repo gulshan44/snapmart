@@ -141,7 +141,7 @@ const Pages = () => {
                 key={index}
                 onClick={() => {
                   setCurrentPage(index + 1);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  window.scrollTo(0, 0);
                 }}
 
                 className={`px-3 py-1 rounded border text-sm ${currentPage === index + 1
