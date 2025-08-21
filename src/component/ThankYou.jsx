@@ -32,10 +32,10 @@ const ThankYou = () => {
 
                 <Link
                     to="/"
-                    className="inline-block bg-indigo-600 mb-2 text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-indigo-700 transition"
+                    className="inline-block bg-indigo-600 text-white mb-2 px-6 py-3 rounded-full font-semibold text-sm hover:bg-indigo-700 transition"
                 >
                     Continue Shopping
-                </Link>
+                </Link>{" "}
 
                 <Link
                     to="/myorder"
