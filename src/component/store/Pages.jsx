@@ -3,6 +3,7 @@ import Container from '../Container'
 import ProductBox from '../ProductBox';
 import { useSearch } from '../../context/SearchContext';
 import { useLoader } from '../../context/LoaderContext';
+import localProducts from '../../data/products.json';
 
 const Pages = () => {
 
@@ -34,12 +35,15 @@ const Pages = () => {
       .then(res => res.json())
       .then(data => {
         if (data && Array.isArray(data.products)) {
-          setProducts(data.products);
+          setProducts([...data.products, ...localProducts]);
+        } else {
+          setProducts(localProducts);
         }
         setLoading(false);
       })
       .catch(err => {
         console.error("Product error", err);
+        setProducts(localProducts);
         setLoading(false);
       });
   }, []);

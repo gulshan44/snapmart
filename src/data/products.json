@@ -1,38 +1,38 @@
 [
   {
     "id": 101,
-    "title": "iPhone 14 Pro Max",
-    "price": 124999,
+    "title": "iPhone 16 Pro Max",
+    "price": 174990,
     "category": "smartphone",
-    "image": "https://dummyimage.com/400x400/000/fff&text=iPhone+14+Pro+Max"
+    "image": "/images/iPhone 16 Pro Max.jpg"
   },
   {
     "id": 102,
-    "title": "Samsung Galaxy S23 Ultra",
-    "price": 99999,
+    "title": "Samsung Galaxy S25 Ultra",
+    "price": 154990,
     "category": "smartphone",
-    "image": "https://dummyimage.com/400x400/000/fff&text=Galaxy+S23+Ultra"
+    "image": "/images/Samsung Galaxy S25 Ultra.png"
   },
   {
     "id": 103,
     "title": "OnePlus 11R 5G",
     "price": 45999,
     "category": "smartphone",
-    "image": "https://dummyimage.com/400x400/000/fff&text=OnePlus+11R"
+    "image": "/images/OnePlus 11R 5G.webp"
   },
   {
     "id": 104,
     "title": "MacBook Air M2",
     "price": 119999,
     "category": "laptop",
-    "image": "https://dummyimage.com/400x400/000/fff&text=MacBook+Air+M2"
+    "image": "/images/MacBook Air M2.webp"
   },
   {
     "id": 105,
     "title": "Dell XPS 13",
     "price": 104999,
     "category": "laptop",
-    "image": "https://dummyimage.com/400x400/000/fff&text=Dell+XPS+13"
+    "image": "/images/Dell XPS 13.webp"
   },
   {
     "id": 106,
